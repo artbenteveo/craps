@@ -13,6 +13,7 @@ function init(){
 
 	dado1 = document.getElementById("dado1");
 	dado2 = document.getElementById("dado2");
+	cerrar.addEventListener("click",cerrarVentana);
 }
 
 function tirardado(){
@@ -31,37 +32,50 @@ function jugar(){
 
 	
 	turno = turno+1;
-	alert("Turno "+ turno);
+	mostrarMensaje("Turno "+ turno);
 	suma = tiro_1+tiro_2; 
+
 
 	if (turno == 1)
 	{
 		if(suma == 11 || suma == 7 )
 		{
-			alert("perdiste, sos un tonto");
+			mostrarMensaje("Perdiste, sos un tonto");
 			turno = 0;
-		
+
 		}
 	}
 	if (turno == 2)
 	{
 		if(suma == 11 || suma == 7 || suma == 3 || suma == 5 )
 		{
-			alert("perdiste, sos un tonto");
+			mostrarMensaje("Perdiste, sos un tonto");
 			turno = 0;
-		
 		}
 	}
 	if (turno == 3)
 	{
 		if(suma == 11 || suma == 7 || suma == 3 || suma == 5 || suma == 9 || suma == 12 || suma == 10 || suma ==2)
 		{
-			alert("perdiste, sos un tonto");
+			mostrarMensaje("Perdiste, sos un tonto");
 			turno = 0;
-		
 		}
 		else {
-			alert ("... No puedo creerlo..Lo hiciste. Venciste al demonio del dado. Eres un héroe");
-		}
+			mostrarMensaje("... No puedo creerlo. Lo hiciste. Venciste al demonio del dado. Eres un héroe");
+			turno=0
+			}	
+		turno=0		
 	}
+}
+function mostrarMensaje (Mensaje){
+	mensaje_texto.innerHTML= Mensaje;
+	abrirVentana();
+}
+
+function abrirVentana(){  
+  ventana.className = "ligthbox animate__animated animate__fadeIn";
+}
+
+function cerrarVentana(){
+  ventana.className = "ligthbox hidden";
 }
