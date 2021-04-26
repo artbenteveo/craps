@@ -4,6 +4,12 @@ var posiciones = [0,-160,-320,-481,-642,-803];
 var dado1,dado2,boton_tirar;
 var turno = 0;
 var suma;
+var punto;
+var turno_ninja = 0;
+var disputa = false;
+
+
+
 
 window.onload = init;
 
@@ -34,38 +40,43 @@ function jugar(){
 	turno = turno+1;
 	mostrarMensaje("Turno "+ turno);
 	suma = tiro_1+tiro_2; 
+	turno_ninja = turno_ninja +1
 
+	
+	if (turno !== 1 && disputa == false)
+	{
 
-	if (turno == 1)
-	{
-		if(suma == 11 || suma == 7 )
+		if(suma == 4 || suma == 5 || suma == 6 || suma == 8 || suma == 9 || suma == 10)
 		{
-			mostrarMensaje("Perdiste, sos un tonto");
-			turno = 0;
+			mostrarMensaje("Has entrado en la zona de disputa, vuelve a sacar " + suma + " y sobrevivirás");
+      		punto = suma;
+      		turno_ninja =0;
+      		disputa = true;
 
+			
 		}
+	
+
 	}
-	if (turno == 2)
+
+	if ( turno_ninja !== 0 && punto == suma  )
 	{
-		if(suma == 11 || suma == 7 || suma == 3 || suma == 5 )
-		{
-			mostrarMensaje("Perdiste, sos un tonto");
-			turno = 0;
-		}
-	}
-	if (turno == 3)
+		mostrarMensaje("Felicidades... sobrevives");
+		turno_ninja= 0;
+		turno =0;
+		punto = 0;
+		disputa = false;
+	}	
+	if (turno !== 1 && suma == 7)	
 	{
-		if(suma == 11 || suma == 7 || suma == 3 || suma == 5 || suma == 9 || suma == 12 || suma == 10 || suma ==2)
-		{
-			mostrarMensaje("Perdiste, sos un tonto");
-			turno = 0;
-		}
-		else {
-			mostrarMensaje("... No puedo creerlo. Lo hiciste. Venciste al demonio del dado. Eres un héroe");
-			turno=0
-			}	
-		turno=0		
+		mostrarMensaje("Mala Suerte... El Demonio del Dado agarra tu cráneo con una fuerza sobrenatural y lo aplasta lentamente, lo último que experiencias es el sonido de tu propio cerebro destripándose.");
+		turno_ninja= 0;
+		turno =0;
+		punto = 0;
+		disputa = false;
+
 	}
+	
 }
 function mostrarMensaje (Mensaje){
 	mensaje_texto.innerHTML= Mensaje;
