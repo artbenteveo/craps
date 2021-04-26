@@ -7,10 +7,11 @@ background-color: #2D232E;
 #titulo{
 
 	margin:0 auto;
-	width: 154px;
+	width: 300px;
 	margin-top: 200px;
 	margin-bottom:45px;
 	color: #F1F0EA;
+	text-align: center
 
 }
 
@@ -37,9 +38,14 @@ border:0;
 border-radius:10px;
 cursor:pointer;
 
-
-
 }
+
+.contenido{
+  width:px;
+  margin:0 auto; 
+  text-align: center;
+  }
+
 #mensaje_texto{
   position: absolute;
   top: 30px;
