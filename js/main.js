@@ -38,12 +38,12 @@ function jugar(){
 
 	
 	turno = turno+1;
-	mostrarMensaje("Tienes un turno más...");
+	mostrarMensaje("Turno " + turno);
 	suma = tiro_1+tiro_2; 
 	turno_ninja = turno_ninja +1
 
 	
-	if (turno = 1 && disputa==false){
+	if (turno == 1 ){
 		if (suma == 7 || suma == 11)
 		{
 			mostrarMensaje("Felicidades... sobrevives. Si vuelves a tirar, reiniciarás el juego.");
@@ -58,7 +58,7 @@ function jugar(){
 			disputa=false;
 		}
 	}
-	if (turno !== 1 && disputa == false)
+	if (turno !== 0 && disputa == false)
 	{
 
 		if(suma == 4 || suma == 5 || suma == 6 || suma == 8 || suma == 9 || suma == 10)
