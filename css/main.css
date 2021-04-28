@@ -40,28 +40,22 @@ cursor:pointer;
 
 }
 
-.contenido_principal{
-  width:px;
+
+
+
+.contenido{
+  width:600px;
   margin:0 auto; 
   text-align: center;
   }
-
-.contenido{
-  width:px;
-  margin:0 auto; 
-  text-align: left;
-  }
 .subtitulo{
-	width:px;
+	width:1000px;
 	margin:0 auto;
 	text-align:center;
+	font-weight: bolder;
+	font-size: 18px;
 }
 
-#volver_desde_instucciones{
-	width:px;
-	margin:0 auto;
-	text-align:center;
-}
 
 #mensaje_texto{
   position: absolute;

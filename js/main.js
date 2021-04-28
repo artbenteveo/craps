@@ -38,7 +38,7 @@ function jugar(){
 
 	
 	turno = turno+1;
-	mostrarMensaje("Turno " + turno);
+	mostrarMensaje("Turno " + turno + ", buena suerte...");
 	suma = tiro_1+tiro_2; 
 	turno_ninja = turno_ninja +1
 
@@ -52,7 +52,7 @@ function jugar(){
 			disputa=false;
 		}
 		if (suma == 2 || suma == 3 || suma == 12 && disputa==false){
-			mostrarMensaje("Mala suerte, no lograste sobrevivir ni siquiera un turno. El Demonio del Dado toma tu alma y te la arrebata, causándote un enorme dolor, lo cual es lo último que sientes. Vuelve a tirar para volver a intentarlo");
+			mostrarMensaje("Mala suerte, no lograste sobrevivir ni siquiera un turno. El Demonio del Dado toma tu alma y te la arrebata, causándote un dolor punzante que recorre todo tu cuerpo. Vuelve a tirar para volver a intentarlo.");
 			turno=0;
 			punto=0;
 			disputa=false;
