@@ -47,6 +47,14 @@ cursor:pointer;
   width:600px;
   margin:0 auto; 
   text-align: center;
+  text-align: justify;
+
+  }
+  .otros{
+  width:300px;
+  margin:0 auto; 
+  text-align: center;
+
   }
 .subtitulo{
 	width:1000px;
