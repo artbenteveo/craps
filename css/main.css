@@ -40,11 +40,28 @@ cursor:pointer;
 
 }
 
-.contenido{
+.contenido_principal{
   width:px;
   margin:0 auto; 
   text-align: center;
   }
+
+.contenido{
+  width:px;
+  margin:0 auto; 
+  text-align: left;
+  }
+.subtitulo{
+	width:px;
+	margin:0 auto;
+	text-align:center;
+}
+
+#volver_desde_instucciones{
+	width:px;
+	margin:0 auto;
+	text-align:center;
+}
 
 #mensaje_texto{
   position: absolute;
