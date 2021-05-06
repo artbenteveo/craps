@@ -5,7 +5,6 @@ var dado1,dado2,boton_tirar;
 var turno = 0;
 var suma;
 var punto;
-var turno_ninja = 0;
 var disputa = false;
 
 
@@ -40,7 +39,6 @@ function jugar(){
 	turno = turno+1;
 	mostrarMensaje("Turno " + turno + ", buena suerte...");
 	suma = tiro_1+tiro_2; 
-	turno_ninja = turno_ninja +1
 
 	
 	if (turno == 1 ){
@@ -65,7 +63,6 @@ function jugar(){
 		{
 			mostrarMensaje("Has entrado en la zona de disputa, vuelve a sacar " + suma + " antes de sacar 7 y sobrevivirás");
       		punto = suma;
-      		turno_ninja =0;
       		disputa = true;
 			
 		}
@@ -73,10 +70,9 @@ function jugar(){
 
 	}
 
-	if ( turno_ninja !== 0 && punto == suma  )
+	if ( turno !== 1 && punto == suma  )
 	{
 		mostrarMensaje("Felicidades... sobrevives. Si vuelves a tirar, reiniciarás el juego.");
-		turno_ninja= 0;
 		turno =0;
 		punto = 0;
 		disputa = false;
@@ -84,7 +80,6 @@ function jugar(){
 	if (turno !== 1 && suma == 7 && disputa==true)	
 	{
 		mostrarMensaje("Mala Suerte... El Demonio del Dado agarra tu cráneo con una fuerza sobrenatural y lo aplasta lentamente, lo último que experimentas es el sonido de tu propio cerebro destripándose.Vuelve a tirar para volver a intentarlo");
-		turno_ninja= 0;
 		turno =0;
 		punto = 0;
 		disputa = false;
